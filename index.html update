@@ -1,0 +1,160 @@
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earn with Bojoh 2025</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; }
+    header { background:#222; color:#fff; padding:20px; text-align:center; }
+    nav { background:#333; display:flex; justify-content:center; }
+    nav a { color:#fff; padding:14px 20px; text-decoration:none; display:block; }
+    nav a:hover { background:#444; }
+    section { padding:20px; max-width:1100px; margin:auto; }
+    h2 { color:#222; }
+    .affiliate-banner { margin:20px 0; text-align:center; }
+    .affiliate-banner img { max-width:100%; border-radius:8px; }
+    footer { background:#222; color:#ccc; text-align:center; padding:20px; margin-top:40px; }
+
+    /* Chatbot */
+    #chatbot-toggle { position:fixed; bottom:20px; right:20px; background:#0077ff; color:#fff; border:none; border-radius:50%; width:60px; height:60px; font-size:24px; cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.2); }
+    #chatbot { position:fixed; bottom:90px; right:20px; width:350px; max-height:500px; background:#fff; border:1px solid #ccc; border-radius:10px; display:none; flex-direction:column; box-shadow:0 4px 12px rgba(0,0,0,0.3); }
+    #chatbot header { background:#0077ff; color:#fff; padding:10px; border-radius:10px 10px 0 0; }
+    #chatbot-messages { flex:1; overflow-y:auto; padding:10px; font-size:14px; }
+    #chatbot-input { display:flex; border-top:1px solid #ddd; }
+    #chatbot-input input { flex:1; padding:10px; border:none; outline:none; font-size:14px; }
+    #chatbot-input button { padding:10px 15px; background:#0077ff; color:#fff; border:none; cursor:pointer; }
+    .msg-user { text-align:right; color:#0077ff; margin:5px 0; }
+    .msg-bot { text-align:left; color:#222; margin:5px 0; }
+
+    /* Responsive */
+    @media(max-width:768px){
+      nav { flex-direction:column; }
+      #chatbot { width:90%; right:5%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Earn with Bojoh 2025</h1>
+  <p>The right information leads you to achieving your passion and dreams.</p>
+</header>
+
+<nav>
+  <a href="#blog">Blog</a>
+  <a href="#hotels">Hotels & Travel</a>
+  <a href="#referrals">Referrals</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="blog">
+  <h2>Latest Blog Posts</h2>
+  <article>
+    <h3>Make Money Online with Your Mobile in 2025</h3>
+    <p>Discover the best ways to earn from anywhere using your smartphone – from affiliate marketing, trading crypto, online tutoring, to AI-powered tools.</p>
+  </article>
+  <div class="affiliate-banner">
+    <a href="https://www.binance.com/referral/earn-together/refertoearn2000usdc/claim?hl=en&ref=GRO_14352_ZZCQ0&utm_source=referralmode" target="_blank">
+      <img src="https://public.bnbstatic.com/image/cms/blog/20211101/Blog_Banner_Binance.jpg" alt="Trade Crypto with Binance">
+    </a>
+  </div>
+</section>
+
+<section id="hotels">
+  <h2>Hotels & Travel Deals</h2>
+  <p>Book the best 3-star and above hotels in Cameroon and worldwide.</p>
+  <a href="https://www.booking.com/affiliate-program" target="_blank">Explore Hotel Listings →</a>
+</section>
+
+<section id="referrals">
+  <h2>Trusted Referral Platforms</h2>
+  <ul>
+    <li><a href="https://izichange.com/sign-up?ref=601667" target="_blank">IziChange - Crypto ↔ Mobile Money</a></li>
+    <li><a href="https://preply.com" target="_blank">Preply - Teach & Learn Languages</a></li>
+    <li><a href="https://stackskills.com" target="_blank">StackSkills - Online Courses</a></li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:detcheinquebojoh@gmail.com">detcheinquebojoh@gmail.com</a></p>
+  <p>Share: <a href="https://wa.me/237650755756">WhatsApp</a> | <a href="https://facebook.com">Facebook</a></p>
+</section>
+
+<!-- AdSense Placeholder -->
+<div style="text-align:center; margin:20px 0;">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3382049717111851" crossorigin="anonymous"></script>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3382049717111851" data-ad-slot="1234567890" data-ad-format="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<footer>
+  <p>&copy; 2025 Earn with Bojoh. All rights reserved.</p>
+</footer>
+
+<!-- Chatbot Toggle -->
+<button id="chatbot-toggle"><i class="fas fa-robot"></i></button>
+<div id="chatbot">
+  <header>Bojoh AI Assistant</header>
+  <div id="chatbot-messages"></div>
+  <div id="chatbot-input">
+    <input type="text" id="user-input" placeholder="Ask me how to make money...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<script>
+  // Toggle chatbot
+  const toggleBtn = document.getElementById('chatbot-toggle');
+  const chatbot = document.getElementById('chatbot');
+  toggleBtn.addEventListener('click', () => {
+    chatbot.style.display = chatbot.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+  // Chatbot responses
+  const messages = document.getElementById('chatbot-messages');
+  function sendMessage(){
+    const input = document.getElementById('user-input');
+    const text = input.value.trim();
+    if(!text) return;
+    appendMessage('user', text);
+    input.value = '';
+    setTimeout(()=>generateReply(text), 600);
+  }
+
+  function appendMessage(sender, text){
+    const div = document.createElement('div');
+    div.className = sender==='user' ? 'msg-user' : 'msg-bot';
+    div.textContent = text;
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function generateReply(text){
+    let reply = "";
+    if(text.toLowerCase().includes("crypto")){
+      reply = "You can trade crypto on Binance or swap instantly with IziChange.";
+    } else if(text.toLowerCase().includes("hotel")){
+      reply = "Check out affordable hotels via our Booking affiliate link.";
+    } else if(text.toLowerCase().includes("skill")){
+      reply = "Learn new skills on StackSkills or teach on Preply to earn.";
+    } else {
+      reply = "Great idea! Explore affiliate marketing, online tutoring, freelancing, and crypto as top money-making options in 2025.";
+    }
+    appendMessage('bot', reply);
+  }
+
+  // Click tracking
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      console.log('Affiliate click tracked:', link.href);
+    });
+  });
+</script>
+
+</body>
+</html>
+
+ 
